@@ -1,10 +1,34 @@
+
+
+
+
+@mixin figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+}
+
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   
-  p + p {
+  p + p, p + figure, ol + figure, figure + p {
     margin-top: $gutter;
   }
+  
+  figure + figure {
+    margin-top: $gutter * 2;  
+  }
+  
+  ol {
+    list-style-type: decimal;
+  }
+  
+  figcaption {
+    @include figcaption;
+  }
+  
 }
 
 

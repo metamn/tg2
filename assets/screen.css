@@ -172,41 +172,55 @@ img {
   width: 100%;
 }
 
-/* line 1, typography.scss */
+/* line 12, typography.scss */
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
-/* line 5, typography.scss */
-body p + p {
+/* line 16, typography.scss */
+body p + p, body p + figure, body ol + figure, body figure + p {
   margin-top: 1.25em;
 }
+/* line 20, typography.scss */
+body figure + figure {
+  margin-top: 2.5em;
+}
+/* line 24, typography.scss */
+body ol {
+  list-style-type: decimal;
+}
+/* line 28, typography.scss */
+body figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+}
 
-/* line 16, typography.scss */
+/* line 40, typography.scss */
 h4 {
   font-style: italic;
   font-size: larger;
 }
 
-/* line 21, typography.scss */
+/* line 45, typography.scss */
 h1 {
   font-size: 4.23077em;
   padding: 1.29532em 0;
 }
 
-/* line 22, typography.scss */
+/* line 46, typography.scss */
 h2 {
   font-size: 2.61538em;
   padding: 1.28666em 0;
 }
 
-/* line 23, typography.scss */
+/* line 47, typography.scss */
 h3 {
   font-size: 1.61538em;
   padding: 1.30936em 0;
 }
 
-/* line 25, typography.scss */
+/* line 49, typography.scss */
 h1, h2, h3, h4 {
   font-family: 'Old Standard TT', serif;
 }
@@ -225,6 +239,10 @@ html body a {
 /* line 20, colors.scss */
 html body a:hover {
   border-bottom: 1px solid;
+}
+/* line 23, colors.scss */
+html body a:hover img {
+  border-bottom: none;
 }
 /* line 21, screen.scss */
 html body #grid {
@@ -263,6 +281,10 @@ html body .container header a {
 html body .container header a:hover {
   border-bottom: 1px solid;
 }
+/* line 23, colors.scss */
+html body .container header a:hover img {
+  border-bottom: none;
+}
 /* line 42, screen.scss */
 html body .container #about {
   height: 12.5em;
@@ -292,6 +314,10 @@ html body .container footer .container p a {
 html body .container footer .container p a:hover {
   border-bottom: 1px solid;
 }
+/* line 23, colors.scss */
+html body .container footer .container p a:hover img {
+  border-bottom: none;
+}
 /* line 63, screen.scss */
 html body .container footer .container p span {
   font-family: 'Old Standard TT', serif;
@@ -313,6 +339,13 @@ html body.frontpage main .container article h1, html body.frontpage main .contai
 /* line 85, screen.scss */
 html body.frontpage main .container article .category {
   text-align: center;
-  font-size: small;
-  font-variant: small-caps;
+  font-style: italic;
+  font-size: smaller;
+}
+/* line 97, screen.scss */
+html body.article main .container {
+  max-width: 24.58333em;
+  border-bottom: 1px solid #dfdfdf;
+  padding-bottom: 5em;
+  margin-bottom: 5em;
 }

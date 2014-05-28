@@ -83,11 +83,22 @@ html {
             }
             
             .category {
-              text-align: center;
-              font-size: small;
-              font-variant: small-caps;
+              @include figcaption;
             }
           }
+        }
+      }
+    }
+    
+    
+    
+    &.article {
+      main {
+        .container {
+          max-width: $text-grid-width;
+          border-bottom: 1px solid $grey;
+          padding-bottom: $grid-height;
+          margin-bottom: $grid-height;
         }
       }
     }
