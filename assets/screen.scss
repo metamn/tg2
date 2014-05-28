@@ -6,6 +6,7 @@
 @import "compass/reset";
 @import "compass/css3";
 
+@import "colors";
 @import "grid";
 @import "visual-grid";
 
@@ -14,18 +15,37 @@
 
 html {
   body {
-    .container {
-      text-align: center;
-      margin-top: $gutter;
-      
-      header {
-        
-      }
+    @include color;
+    @include link;
+    
+    #grid, #gravity {
+      display: none;
     }
     
-    
-    #grid {
-      display: block;
+    .container {
+      position: relative;
+      left: 50%;
+      @include transform(translateX(-50%));
+      padding: $gutter;
+      
+      header, footer {
+        .container {
+          max-width: $text-grid-width;
+        }
+      }
+      
+      header {
+        @include rows(1);
+        @include link($title);
+      }
+      
+      footer {
+        @include rows(2);
+        
+        h3 {
+          display: none;
+        }
+      }
     }
   }
 }

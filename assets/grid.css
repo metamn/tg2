@@ -1,14 +1,20 @@
+/* line 22, grid.scss */
+body {
+  font-size: 125%;
+  line-height: 1.25;
+}
+
 @media only screen and (max-width: 47.999em) {
-  /* line 41, grid.scss */
+  /* line 54, grid.scss */
   body {
-    font-size: 87.5%;
+    font-size: 100%;
     line-height: 1.25;
   }
 }
 @media only screen and (min-width: 90.001em) {
-  /* line 41, grid.scss */
+  /* line 62, grid.scss */
   body {
-    font-size: 112.5%;
+    font-size: 150%;
     line-height: 1.25;
   }
 }

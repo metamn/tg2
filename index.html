@@ -12,29 +12,49 @@
         <link href="assets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
     
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,300,300italic|Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'>
   </head>
   
   <body class="frontpage">
     <div class="container">
        <header id="header">
         <div class="container">
-          <h1>
+          <h4>
             <a title="csongor bartus" href="http://metamn.github.io/cs5/">csongor bartus</a>
-          </h1>
+          </h4>
           
           <p>
             web designer &amp; developer
           </p>
         </div>
       </header>
+      
+      
+      <footer id="footer">
+        <div class="container">
+          <aside>
+            <h3>About Csongor</h3>
+            <p>
+              csongor is one of the few <a title="What is an unicorn?" href="{{ site.url }}/unicorn">unicorns</a> available today. 
+            </p>
+            
+            <p>
+              from consulting to deployment he helps you to <a title="Deliver the message" href="{{ site.url }}/message">deliver your message</a> across all devices and browsers.
+            </p>
+            
+            <p>
+              working with him you'll <a title="Get more" href="{{ site.url }}/more">get more. A product</a> instead of a simple website.
+            </p>
+          </aside>
+        </div>
+      </footer>
     </div>
     
     <!-- jQuery from CDN and local fallback -->
     <script src="assets/jquery-1.10.2.min.js"></script>
     
     <script>
-      var elements = '[{"id" : "header", "type" : "text"}';
+      var elements = '[{"id" : "header", "type" : "text"},{"id" : "footer", "type" : "text"}]';
     </script>
     
     <!-- The grid & gravity point  -->

@@ -1,17 +1,27 @@
+@mixin typographic-grid {
+  font-size: $font-size;
+  line-height: $line-height;
+  
+  $characters-per-row: 50 !global;
+  $grid-cells-per-text: 6 !global;
+  $text-width: $characters-per-row * $gutter/2 !global;
+  $grid-width: $text-width / $grid-cells-per-text !global;
+
+  $text-height: $gutter*4 !global;
+  $grid-height: $text-height !global;
+
+  $text-grid-width: 4 * $grid-width + 3 * $gutter !global;
+}
+
+
 // 0. Reset / Default settings
-// - this is suitable for mobile screens
-$font-size: 87.5%;
-$line-height: 1.25;
-$gutter: 1.25em;
+$font-size: 125% !global;
+$line-height: 1.25 !global;
+$gutter: 1.25em !global;
 
-$characters-per-row: 30;
-$text-width: $characters-per-row * $gutter/2;
-$text-height: $gutter*4;
-
-$grid-width: $text-width / 15;
-$grid-height: $text-height;
-
-$text-grid-width: 4 * $grid-width + 3 * $gutter;
+body {
+  @include typographic-grid;
+}
 
 
 
@@ -37,39 +47,57 @@ $breakpoint-large-screen: 90em; // 1440px
 }
 
 
-@mixin typographic-grid($font-size, $line-height) {
+// 1. Scalable typographic grid
+@include mobile {
+  $font-size: 100% !global;
+  
   body {
-    font-size: $font-size;
-    line-height: $line-height;
+    @include typographic-grid;
   }
 }
 
 
-// 1. Scalable typographic grid
-@include mobile {
-  @include typographic-grid($font-size, $line-height);
-}
-
-
 @include large-screen {
-  $font-size: 112.5%;
-  $line-height: 1.25;
-  $gutter: 1.25em;
-  
-  $characters-per-row: 60;
-  $text-width: $characters-per-row * $gutter/2;
-  $text-height: $gutter*4;
-
-  $grid-width: $text-width / 6;
-  $grid-height: $text-height;
-
-  $text-grid-width: 4 * $grid-width + 3 * $gutter;
-
-  @include typographic-grid($font-size, $line-height);
+  $font-size: 150% !global;
+  body {
+    @include typographic-grid;
+  }
 }
 
 
 
-// 2. Grid width & height
 
+
+
+
+@mixin columns($nr, $responsive: false) {
+  @if ($responsive == false) {
+    width: col($nr);
+  } @else {
+    width: 100%;
+    max-width: col($nr);
+  }
+  
+  margin-right: $gutter;
+  float: left;
+}
+
+@mixin rows($nr) {
+  height: row($nr);
+}
+
+
+
+
+@function col($nr) {
+  @if ($nr == 1) {
+    @return $grid-width + $gutter;
+  } @else {
+    @return $nr * $grid-width + ($nr - 1) * $gutter;    
+  }
+}
+
+@function row($nr) {
+  @return $nr * ($grid-height + $gutter);
+}
 

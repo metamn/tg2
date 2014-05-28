@@ -67,17 +67,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 22, grid.scss */
+body {
+  font-size: 125%;
+  line-height: 1.25;
+}
+
 @media only screen and (max-width: 47.999em) {
-  /* line 41, grid.scss */
+  /* line 54, grid.scss */
   body {
-    font-size: 87.5%;
+    font-size: 100%;
     line-height: 1.25;
   }
 }
 @media only screen and (min-width: 90.001em) {
-  /* line 41, grid.scss */
+  /* line 62, grid.scss */
   body {
-    font-size: 112.5%;
+    font-size: 150%;
     line-height: 1.25;
   }
 }
@@ -139,7 +145,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 #grid .col {
   border-right: 1px solid;
   border-bottom: 1px solid;
-  width: calc(6.25em + 1.25em - 1px);
+  width: calc(5.20833em + 1.25em - 1px);
   height: calc(5em + 1.25em - 1px);
   float: left;
 }
@@ -160,12 +166,98 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
 }
 
-/* line 17, screen.scss */
-html body .container {
-  text-align: center;
+/* line 1, typography.scss */
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+/* line 5, typography.scss */
+body p + p {
   margin-top: 1.25em;
 }
-/* line 27, screen.scss */
-html body #grid {
-  display: block;
+
+/* line 16, typography.scss */
+h4 {
+  font-style: italic;
+  font-size: larger;
+}
+
+/* line 21, typography.scss */
+h1 {
+  font-size: 4.23077em;
+  padding: 1.29532em 0;
+}
+
+/* line 22, typography.scss */
+h2 {
+  font-size: 2.61538em;
+  padding: 1.28666em 0;
+}
+
+/* line 23, typography.scss */
+h3 {
+  font-size: 1.61538em;
+  padding: 1.30936em 0;
+}
+
+/* line 25, typography.scss */
+h1, h2, h3, h4 {
+  font-family: 'Old Standard TT', serif;
+}
+
+/* line 17, screen.scss */
+html body {
+  color: #3a3a3a;
+  background: #f9f9f9;
+}
+/* line 13, colors.scss */
+html body a {
+  color: #a08158;
+  background: #f9f9f9;
+  text-decoration: none;
+}
+/* line 17, colors.scss */
+html body a:hover {
+  border-bottom: 1px solid;
+}
+/* line 21, screen.scss */
+html body #grid, html body #gravity {
+  display: none;
+}
+/* line 25, screen.scss */
+html body .container {
+  position: relative;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 1.25em;
+}
+/* line 32, screen.scss */
+html body .container header .container, html body .container footer .container {
+  max-width: 24.58333em;
+}
+/* line 37, screen.scss */
+html body .container header {
+  height: 6.25em;
+}
+/* line 13, colors.scss */
+html body .container header a {
+  color: #795555;
+  background: #f9f9f9;
+  text-decoration: none;
+}
+/* line 17, colors.scss */
+html body .container header a:hover {
+  border-bottom: 1px solid;
+}
+/* line 42, screen.scss */
+html body .container footer {
+  height: 12.5em;
+}
+/* line 45, screen.scss */
+html body .container footer h3 {
+  display: none;
 }
