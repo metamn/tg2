@@ -18,17 +18,17 @@ html {
     @include color;
     @include link;
     
-    #grid, #gravity {
+    #grid {
+      display: none;
+    }
+    #gravity {
       display: none;
     }
     
     .container {
-      position: relative;
-      left: 50%;
-      @include transform(translateX(-50%));
-      padding: $gutter;
+      @include container;
       
-      header, footer {
+      header, #about, footer {
         .container {
           max-width: $text-grid-width;
         }
@@ -39,13 +39,58 @@ html {
         @include link($title);
       }
       
-      footer {
+      #about {
         @include rows(2);
         
         h3 {
           display: none;
         }
       }
+      
+      footer {
+        .container {
+          margin: $grid-height 0;
+          
+          p {
+            text-align: center;
+            border: 1px solid $grey;
+            padding: $gutter/2 $gutter;
+            
+            box-shadow: 1px 0 $grey, 0 1px $grey, 2px 1px $grey, 1px 2px $grey, 3px 2px $grey, 2px 3px $grey, 4px 3px $grey, 3px 4px $grey, 5px 4px $grey, 4px 5px $grey;
+            
+            @include link($color);
+            
+            span {
+              font-family: 'Old Standard TT', serif;
+              font-style: italic;
+              font-size: larger;
+            }
+          }
+        }
+      }
     }
+  
+    &.frontpage {
+      main {
+        .container {;
+          max-width: $text-grid-width + $text-grid-width / 2;
+          
+          article {
+            margin-top: $gutter;
+            
+            h1, figcaption {
+              display: none;
+            }
+            
+            .category {
+              text-align: center;
+              font-size: small;
+              font-variant: small-caps;
+            }
+          }
+        }
+      }
+    }
+  
   }
 }

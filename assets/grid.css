@@ -18,3 +18,8 @@ body {
     line-height: 1.25;
   }
 }
+/* line 78, grid.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}

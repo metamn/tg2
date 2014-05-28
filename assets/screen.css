@@ -87,6 +87,12 @@ body {
     line-height: 1.25;
   }
 }
+/* line 78, grid.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* line 6, visual-grid.scss */
 #gravity .h-vertical, #gravity .h-horizontal, #gravity .h-golden-rectangle {
   position: fixed;
@@ -210,21 +216,25 @@ html body {
   color: #3a3a3a;
   background: #f9f9f9;
 }
-/* line 13, colors.scss */
+/* line 16, colors.scss */
 html body a {
   color: #a08158;
   background: #f9f9f9;
   text-decoration: none;
 }
-/* line 17, colors.scss */
+/* line 20, colors.scss */
 html body a:hover {
   border-bottom: 1px solid;
 }
 /* line 21, screen.scss */
-html body #grid, html body #gravity {
+html body #grid {
   display: none;
 }
-/* line 25, screen.scss */
+/* line 24, screen.scss */
+html body #gravity {
+  display: none;
+}
+/* line 28, screen.scss */
 html body .container {
   position: relative;
   left: 50%;
@@ -236,28 +246,73 @@ html body .container {
   padding: 1.25em;
 }
 /* line 32, screen.scss */
-html body .container header .container, html body .container footer .container {
+html body .container header .container, html body .container #about .container, html body .container footer .container {
   max-width: 24.58333em;
 }
 /* line 37, screen.scss */
 html body .container header {
   height: 6.25em;
 }
-/* line 13, colors.scss */
+/* line 16, colors.scss */
 html body .container header a {
   color: #795555;
   background: #f9f9f9;
   text-decoration: none;
 }
-/* line 17, colors.scss */
+/* line 20, colors.scss */
 html body .container header a:hover {
   border-bottom: 1px solid;
 }
 /* line 42, screen.scss */
-html body .container footer {
+html body .container #about {
   height: 12.5em;
 }
 /* line 45, screen.scss */
-html body .container footer h3 {
+html body .container #about h3 {
   display: none;
+}
+/* line 51, screen.scss */
+html body .container footer .container {
+  margin: 5em 0;
+}
+/* line 54, screen.scss */
+html body .container footer .container p {
+  text-align: center;
+  border: 1px solid #dfdfdf;
+  padding: 0.625em 1.25em;
+  box-shadow: 1px 0 #dfdfdf, 0 1px #dfdfdf, 2px 1px #dfdfdf, 1px 2px #dfdfdf, 3px 2px #dfdfdf, 2px 3px #dfdfdf, 4px 3px #dfdfdf, 3px 4px #dfdfdf, 5px 4px #dfdfdf, 4px 5px #dfdfdf;
+}
+/* line 16, colors.scss */
+html body .container footer .container p a {
+  color: #3a3a3a;
+  background: #f9f9f9;
+  text-decoration: none;
+}
+/* line 20, colors.scss */
+html body .container footer .container p a:hover {
+  border-bottom: 1px solid;
+}
+/* line 63, screen.scss */
+html body .container footer .container p span {
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+  font-size: larger;
+}
+/* line 75, screen.scss */
+html body.frontpage main .container {
+  max-width: 36.875em;
+}
+/* line 78, screen.scss */
+html body.frontpage main .container article {
+  margin-top: 1.25em;
+}
+/* line 81, screen.scss */
+html body.frontpage main .container article h1, html body.frontpage main .container article figcaption {
+  display: none;
+}
+/* line 85, screen.scss */
+html body.frontpage main .container article .category {
+  text-align: center;
+  font-size: small;
+  font-variant: small-caps;
 }

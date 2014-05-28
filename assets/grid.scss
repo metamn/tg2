@@ -68,6 +68,18 @@ $breakpoint-large-screen: 90em; // 1440px
 
 
 
+@mixin container {
+  position: relative;
+  left: 50%;
+  @include transform(translateX(-50%));
+  padding: $gutter;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 @mixin columns($nr, $responsive: false) {
