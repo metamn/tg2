@@ -1,0 +1,191 @@
+// We are building from bottom up every style
+
+@mixin h4 {
+  font-weight: bold;
+  margin-top: $gutter;
+}
+
+@mixin h3 {
+  @include h4;
+  
+  margin-top: $gutter*2;
+  margin-bottom: calc(#{$gutter} - 1px);
+  border-bottom: 1px solid;
+}
+
+@mixin h2 {
+  @include h3;
+  
+  border-bottom: $gutter/2 solid;
+  padding-bottom: $gutter/2;
+  margin-bottom: $gutter;
+}
+
+@mixin h1 {
+  @include h2;
+  
+  margin-top: 0;
+  border-bottom: none;
+  padding: $gutter/2 $gutter/4;
+  width: calc(100% - #{$gutter/2});
+  
+  color: #fff;
+  background: #000;
+}
+
+
+
+@mixin em {
+  font-style: italic;
+}
+
+@mixin mark {
+  padding: $gutter/8;
+}
+
+@mixin figcaption {
+  font-style: italic;
+} 
+
+@mixin typographic-elements {
+  h1 {
+    @include h1;
+  }
+  
+  h2 {
+    @include h2;
+  }
+  
+  h3 {
+    @include h3;
+  }
+  
+  h4 {
+    @include h4;
+  }
+  
+  em {
+    @include em;
+  }
+  
+  mark {
+    @include mark;
+  }
+  
+  figcaption {
+    @include figcaption;
+  }
+}
+
+
+@mixin typographic-elements-spacing {
+  p + p {
+    margin-top: $gutter;
+  }
+}
+
+@mixin typographic-settings {
+  @include typographic-elements;
+  @include typographic-elements-spacing;
+}
+
+
+
+// Extended
+// -------------
+
+
+// ol, ul will have a margin when they are in the first column
+// - otherwise the decimal and the square is not visible
+// - this is done in the grid.scss when defining the article
+@mixin ol {
+  list-style-type: decimal;
+}
+
+@mixin ul {
+  list-style-type: square;
+}
+
+@mixin table {
+  width: 100%;
+  display: table !important;
+  
+  thead {
+    border-bottom: 1px dashed;
+  }
+  
+  thead th, tbody td {
+    padding: $gutter/2;
+    padding-left: 0;
+  }
+  
+  tbody {
+    td {
+      border-bottom: 1px dashed;
+    }
+  }
+}
+
+@mixin figure {
+  border: 1px dashed;
+  padding: $gutter;
+  width: calc(100% - #{$gutter*2} - 2px);
+}
+
+@mixin blockquote {
+  font-style: italic;
+  border: 1px dashed;
+  padding: $gutter;
+  width: calc(100% - #{$gutter*2} - 2px);
+}
+
+
+@mixin extended-typographic-elements {
+  ul {
+    @include ul;
+  }
+  
+  ol {
+    @include ol;
+  }
+  
+  table {
+    @include table;
+  }
+  
+  blockquote {
+    @include blockquote;
+  }
+  
+  figure {
+    @include figure;
+  }
+}
+
+@mixin extended-typographic-elements-spacing {
+  table, blockquote, figure {
+    margin: $gutter 0;
+  }
+  
+  figure + figure, ol + p, ul + p {
+    margin-top: $gutter;
+  }
+}
+
+@mixin extended-typographic-settings {
+  @include extended-typographic-elements;
+  @include extended-typographic-elements-spacing;
+}
+
+
+
+
+
+// Other 
+// --------------------
+
+
+
+@mixin lead {
+  font-weight: bold;
+}

@@ -7,10 +7,25 @@
 @import "compass/css3";
 
 @import "grid";
+@import "visual-grid";
+
+
 @import "typography";
 
 html {
   body {
+    .container {
+      text-align: center;
+      margin-top: $gutter;
+      
+      header {
+        
+      }
+    }
     
+    
+    #grid {
+      display: block;
+    }
   }
 }

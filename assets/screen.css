@@ -66,3 +66,106 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+@media only screen and (max-width: 47.999em) {
+  /* line 41, grid.scss */
+  body {
+    font-size: 87.5%;
+    line-height: 1.25;
+  }
+}
+@media only screen and (min-width: 90.001em) {
+  /* line 41, grid.scss */
+  body {
+    font-size: 112.5%;
+    line-height: 1.25;
+  }
+}
+/* line 6, visual-grid.scss */
+#gravity .h-vertical, #gravity .h-horizontal, #gravity .h-golden-rectangle {
+  position: fixed;
+  z-index: 1000;
+  opacity: .3;
+}
+/* line 12, visual-grid.scss */
+#gravity .h-vertical {
+  left: calc(50% - 1px);
+  height: 100%;
+  border-left: 1px solid red;
+}
+/* line 18, visual-grid.scss */
+#gravity .h-horizontal {
+  top: calc(50% - 1px);
+  width: 100%;
+  border-bottom: 1px solid red;
+}
+/* line 24, visual-grid.scss */
+#gravity .h-golden-rectangle {
+  border: 1px solid green;
+  opacity: .8;
+}
+/* line 29, visual-grid.scss */
+#gravity .h-gravity-point {
+  position: absolute;
+  z-index: 1000;
+  opacity: .3;
+  display: none;
+}
+/* line 34, visual-grid.scss */
+#gravity .h-gravity-point:after {
+  content: '';
+  display: block;
+  width: 1.25em;
+  height: 1.25em;
+  background: red;
+  position: relative;
+  top: -0.625em;
+  left: -0.625em;
+}
+/* line 46, visual-grid.scss */
+#gravity .h-gravity-point:last-of-type {
+  display: block;
+}
+
+/* line 57, visual-grid.scss */
+#grid {
+  position: absolute;
+  top: 0;
+  opacity: .1;
+  z-index: -1;
+}
+
+/* line 64, visual-grid.scss */
+#grid .col {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  width: calc(6.25em + 1.25em - 1px);
+  height: calc(5em + 1.25em - 1px);
+  float: left;
+}
+
+/* line 72, visual-grid.scss */
+#grid .gutter-right {
+  float: right;
+  border-left: 1px solid;
+  width: calc(1.25em - 1px);
+  height: 100%;
+}
+
+/* line 79, visual-grid.scss */
+#grid .gutter-bottom {
+  float: left;
+  border-bottom: 1px solid;
+  height: calc(1.25em - 1px);
+  width: 100%;
+}
+
+/* line 17, screen.scss */
+html body .container {
+  text-align: center;
+  margin-top: 1.25em;
+}
+/* line 27, screen.scss */
+html body #grid {
+  display: block;
+}

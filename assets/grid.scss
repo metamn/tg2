@@ -1,0 +1,75 @@
+// 0. Reset / Default settings
+// - this is suitable for mobile screens
+$font-size: 87.5%;
+$line-height: 1.25;
+$gutter: 1.25em;
+
+$characters-per-row: 30;
+$text-width: $characters-per-row * $gutter/2;
+$text-height: $gutter*4;
+
+$grid-width: $text-width / 15;
+$grid-height: $text-height;
+
+$text-grid-width: 4 * $grid-width + 3 * $gutter;
+
+
+
+// 0. Preparing devices 
+$breakpoint-mobile: 30em; // 480px
+$breakpoint-tablet: 48em; // 768px
+$breakpoint-small-screen: 64em; // 1024px
+$breakpoint-normal-screen: 85.375em; // 1366px
+$breakpoint-large-screen: 90em; // 1440px
+
+
+
+@mixin mobile {
+  @media only screen and (max-width: $breakpoint-tablet - 0.001) {
+    @content
+  }
+}
+
+@mixin large-screen {
+  @media only screen and (min-width: $breakpoint-large-screen + 0.001) {
+    @content
+  }
+}
+
+
+@mixin typographic-grid($font-size, $line-height) {
+  body {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}
+
+
+// 1. Scalable typographic grid
+@include mobile {
+  @include typographic-grid($font-size, $line-height);
+}
+
+
+@include large-screen {
+  $font-size: 112.5%;
+  $line-height: 1.25;
+  $gutter: 1.25em;
+  
+  $characters-per-row: 60;
+  $text-width: $characters-per-row * $gutter/2;
+  $text-height: $gutter*4;
+
+  $grid-width: $text-width / 6;
+  $grid-height: $text-height;
+
+  $text-grid-width: 4 * $grid-width + 3 * $gutter;
+
+  @include typographic-grid($font-size, $line-height);
+}
+
+
+
+// 2. Grid width & height
+
+
