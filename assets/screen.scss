@@ -76,7 +76,7 @@ html {
           max-width: $text-grid-width + $text-grid-width / 2;
           
           article {
-            margin-top: $gutter;
+            margin-bottom: $gutter;
             
             h1, figcaption {
               display: none;

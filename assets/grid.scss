@@ -15,7 +15,7 @@
 
 
 // 0. Reset / Default settings
-$font-size: 125% !global;
+$font-size: 100% !global;
 $line-height: 1.25 !global;
 $gutter: 1.25em !global;
 
@@ -49,7 +49,7 @@ $breakpoint-large-screen: 90em; // 1440px
 
 // 1. Scalable typographic grid
 @include mobile {
-  $font-size: 100% !global;
+  $font-size: 87.5% !global;
   
   body {
     @include typographic-grid;
