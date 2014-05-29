@@ -82,6 +82,10 @@ html {
         .container {;
           max-width: $text-grid-width + $text-grid-width / 2;
           
+          @include mobile {
+            margin-top: $grid-height;
+          }
+          
           article {
             margin-bottom: $gutter;
             

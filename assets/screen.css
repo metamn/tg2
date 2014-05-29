@@ -336,25 +336,31 @@ html body .container footer .container p span {
 html body.frontpage main .container {
   max-width: 36.875em;
 }
-/* line 85, screen.scss */
+@media only screen and (max-width: 47.999em) {
+  /* line 82, screen.scss */
+  html body.frontpage main .container {
+    margin-top: 5em;
+  }
+}
+/* line 89, screen.scss */
 html body.frontpage main .container article {
   margin-bottom: 1.25em;
 }
-/* line 88, screen.scss */
+/* line 92, screen.scss */
 html body.frontpage main .container article h1, html body.frontpage main .container article figcaption {
   display: none;
 }
-/* line 92, screen.scss */
+/* line 96, screen.scss */
 html body.frontpage main .container article .category {
   text-align: center;
   font-style: italic;
   font-size: smaller;
 }
-/* line 104, screen.scss */
+/* line 108, screen.scss */
 html body.article header .container {
   max-width: 36.875em;
 }
-/* line 109, screen.scss */
+/* line 113, screen.scss */
 html body.article main .container {
   max-width: 36.875em;
   border-bottom: 1px solid #dfdfdf;
