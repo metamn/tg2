@@ -87,7 +87,7 @@ body {
     line-height: 1.25;
   }
 }
-/* line 78, grid.scss */
+/* line 79, grid.scss */
 img {
   max-width: 100%;
   height: auto;
@@ -172,57 +172,68 @@ img {
   width: 100%;
 }
 
-/* line 12, typography.scss */
+/* line 15, typography.scss */
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
-/* line 16, typography.scss */
+/* line 19, typography.scss */
 body p + p, body p + figure, body ol + figure, body figure + p {
   margin-top: 1.25em;
 }
-/* line 20, typography.scss */
+/* line 23, typography.scss */
 body figure + figure {
   margin-top: 2.5em;
 }
-/* line 24, typography.scss */
-body ol {
-  list-style-type: decimal;
+/* line 27, typography.scss */
+body figure a:hover {
+  border: none !important;
 }
-/* line 28, typography.scss */
+/* line 31, typography.scss */
 body figcaption {
   text-align: center;
   font-style: italic;
   font-size: smaller;
 }
+/* line 35, typography.scss */
+body ol {
+  list-style-type: decimal;
+}
+/* line 39, typography.scss */
+body .separator {
+  width: 100%;
+  float: left;
+  margin-bottom: 1.25em;
+}
 
-/* line 40, typography.scss */
-h4 {
-  font-style: italic;
+/* line 50, typography.scss */
+h1, h2, h3, h4 {
+  font-family: 'Old Standard TT', serif;
   font-size: larger;
 }
 
-/* line 45, typography.scss */
-h1 {
-  font-size: 4.23077em;
-  padding: 1.29532em 0;
+/* line 56, typography.scss */
+h4 {
+  margin-top: 1.25em;
 }
 
-/* line 46, typography.scss */
-h2 {
-  font-size: 2.61538em;
-  padding: 1.28666em 0;
-}
-
-/* line 47, typography.scss */
+/* line 60, typography.scss */
 h3 {
-  font-size: 1.61538em;
-  padding: 1.30936em 0;
+  margin-top: 2.5em;
+  margin-bottom: 1.25em;
 }
 
-/* line 49, typography.scss */
-h1, h2, h3, h4 {
-  font-family: 'Old Standard TT', serif;
+/* line 65, typography.scss */
+h2 {
+  margin-top: 3.75em;
+  margin-bottom: 2.5em;
+}
+
+/* line 70, typography.scss */
+h1 {
+  margin-top: 3.75em;
+  margin-bottom: 2.5em;
+  font-weight: bold;
 }
 
 /* line 17, screen.scss */
@@ -239,10 +250,6 @@ html body a {
 /* line 20, colors.scss */
 html body a:hover {
   border-bottom: 1px solid;
-}
-/* line 23, colors.scss */
-html body a:hover img {
-  border-bottom: none;
 }
 /* line 21, screen.scss */
 html body #grid {
@@ -281,23 +288,28 @@ html body .container header a {
 html body .container header a:hover {
   border-bottom: 1px solid;
 }
-/* line 23, colors.scss */
-html body .container header a:hover img {
-  border-bottom: none;
+/* line 41, screen.scss */
+html body .container header h4 {
+  font-style: italic;
+  font-family: 'Old Standard TT', serif;
 }
-/* line 42, screen.scss */
+/* line 45, screen.scss */
+html body .container header p {
+  font-size: smaller;
+}
+/* line 50, screen.scss */
 html body .container #about {
   height: 12.5em;
 }
-/* line 45, screen.scss */
+/* line 53, screen.scss */
 html body .container #about h3 {
   display: none;
 }
-/* line 51, screen.scss */
+/* line 59, screen.scss */
 html body .container footer .container {
   margin: 5em 0;
 }
-/* line 54, screen.scss */
+/* line 62, screen.scss */
 html body .container footer .container p {
   text-align: center;
   border: 1px solid #dfdfdf;
@@ -314,37 +326,37 @@ html body .container footer .container p a {
 html body .container footer .container p a:hover {
   border-bottom: 1px solid;
 }
-/* line 23, colors.scss */
-html body .container footer .container p a:hover img {
-  border-bottom: none;
-}
-/* line 63, screen.scss */
+/* line 71, screen.scss */
 html body .container footer .container p span {
-  font-family: 'Old Standard TT', serif;
   font-style: italic;
+  font-family: 'Old Standard TT', serif;
   font-size: larger;
 }
-/* line 75, screen.scss */
+/* line 82, screen.scss */
 html body.frontpage main .container {
   max-width: 36.875em;
 }
-/* line 78, screen.scss */
+/* line 85, screen.scss */
 html body.frontpage main .container article {
   margin-bottom: 1.25em;
 }
-/* line 81, screen.scss */
+/* line 88, screen.scss */
 html body.frontpage main .container article h1, html body.frontpage main .container article figcaption {
   display: none;
 }
-/* line 85, screen.scss */
+/* line 92, screen.scss */
 html body.frontpage main .container article .category {
   text-align: center;
   font-style: italic;
   font-size: smaller;
 }
-/* line 97, screen.scss */
+/* line 104, screen.scss */
+html body.article header .container {
+  max-width: 36.875em;
+}
+/* line 109, screen.scss */
 html body.article main .container {
-  max-width: 24.58333em;
+  max-width: 36.875em;
   border-bottom: 1px solid #dfdfdf;
   padding-bottom: 5em;
   margin-bottom: 5em;

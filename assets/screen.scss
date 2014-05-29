@@ -37,6 +37,14 @@ html {
       header {
         @include rows(1);
         @include link($title);
+        
+        h4 {
+          @include title;
+        }
+        
+        p {
+          font-size: smaller;
+        }
       }
       
       #about {
@@ -61,8 +69,7 @@ html {
             @include link($color);
             
             span {
-              font-family: 'Old Standard TT', serif;
-              font-style: italic;
+              @include title;
               font-size: larger;
             }
           }
@@ -93,9 +100,14 @@ html {
     
     
     &.article {
+      header {
+        .container {
+          max-width: $text-grid-width + $text-grid-width / 2;
+        }
+      }
       main {
         .container {
-          max-width: $text-grid-width;
+          max-width: $text-grid-width + $text-grid-width / 2;
           border-bottom: 1px solid $grey;
           padding-bottom: $grid-height;
           margin-bottom: $grid-height;

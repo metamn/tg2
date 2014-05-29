@@ -75,9 +75,16 @@ $breakpoint-large-screen: 90em; // 1440px
   padding: $gutter;
 }
 
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+
+@mixin block {
+  width: 100%;
+  float: left;
 }
 
 
