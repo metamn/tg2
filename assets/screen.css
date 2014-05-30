@@ -357,13 +357,21 @@ html body.frontpage main .container article .category {
   font-size: smaller;
 }
 /* line 108, screen.scss */
-html body.article header .container {
+html body.article header .container, html body.portfolio header .container {
   max-width: 36.875em;
 }
 /* line 113, screen.scss */
-html body.article main .container {
+html body.article main .container, html body.portfolio main .container {
   max-width: 36.875em;
   border-bottom: 1px solid #dfdfdf;
   padding-bottom: 5em;
   margin-bottom: 5em;
+}
+/* line 125, screen.scss */
+html body.portfolio main figure {
+  margin-bottom: 1.25em;
+}
+/* line 128, screen.scss */
+html body.portfolio main figure figcaption {
+  text-align: left;
 }

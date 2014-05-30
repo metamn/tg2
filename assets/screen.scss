@@ -103,7 +103,7 @@ html {
     
     
     
-    &.article {
+    &.article, &.portfolio {
       header {
         .container {
           max-width: $text-grid-width + $text-grid-width / 2;
@@ -115,6 +115,19 @@ html {
           border-bottom: 1px solid $grey;
           padding-bottom: $grid-height;
           margin-bottom: $grid-height;
+        }
+      }
+    }
+    
+    
+    &.portfolio {
+      main {
+        figure {
+          margin-bottom: $gutter;
+          
+          figcaption {
+            text-align: left;
+          }
         }
       }
     }
